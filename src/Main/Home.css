@@ -1,0 +1,140 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: #333; 
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Ensure header stays on top of the video */
+  z-index: 2; /* Ensure header stays on top of the video */
+}
+
+.logo-container { 
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px; /* Adjust logo size as needed */
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.language {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+}
+
+.hero-section {
+  position: relative; /* Para posicionar el video absolutamente dentro */
+  width: 100%;
+  min-height: 600px; /* Ajusta la altura mínima según necesites */
+  color: white;
+  text-align: center;
+  padding: 100px 20px; /* Mantén el padding para el contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Para que el video no se salga del contenedor */
+}
+
+.hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Asegura que el ancho sea el total del viewport */
+  min-height: 100%; /* Asegura que cubra la altura al menos */
+  height: auto;
+  object-fit: cover;
+  z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  position: relative; /* Asegura que el texto esté encima del video */
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  position: relative; /* Asegura que el texto esté encima del video */
+  z-index: 1;
+}
+
+.filter-bar {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  gap: 15px;
+  position: relative; /* Asegura que la barra de filtros esté encima del video */
+  z-index: 1;
+}
+
+.filter-dropdown {
+  position: relative;
+}
+
+.filter-dropdown select {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  appearance: none; /* Remove default arrow */
+  /* ... (resto de tus estilos para el select) ... */
+}
+
+.filter-dropdown input[type="date"] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.view-video-button {
+  background-color: #ffc107; /* Yellow button color */
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* Asegura que el botón esté encima del video */
+  z-index: 1;
+}
+
+.view-video-button:hover {
+  background-color: #e0a800;
+}
+
+/* Add more CSS for other sections as needed */
